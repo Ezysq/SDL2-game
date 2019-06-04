@@ -170,7 +170,7 @@ void Map::update(SDL_Renderer* ren, Character& player){
     counter--;
 
     if(jump > 0 && jump < 3) player.jumpf(velocity);
-    if(tileCheck(ren, player, player.gxpos()+CHARWIDTH/2, player.gypos()+CHARHEIGHT)) Character::fall=0;
+    if(tileCheck(ren, player, player.gxpos()+CHARWIDTH/2, player.gypos()+CHARHEIGHT)) drawMap(ren);
     if(!Character::fall && jump <= 2){
         jump = 0;
     }
